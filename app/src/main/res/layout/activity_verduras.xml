@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Verduras"
+    android:background="@color/morado"
+    android:layout_gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true"
+                >
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/aguacate"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/arveja"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvAguacate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_agu"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorAguacate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvArveja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:scaleType="centerCrop"
+                        android:text="@string/text_arv"
+                        android:layout_marginLeft="60dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorArveja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosAguacate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:onClick="menosAguacate"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanAguacate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasAguacate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:onClick="masAguacate"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosArveja"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosArveja"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanArveja"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasArveja"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masArveja"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+
+
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/berengena"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brocoli" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvBerengena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_bere"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorBerengena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvBrocoli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_bro"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorBrocoli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosBerengena"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosBerengena"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanBerengena"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasBerengena"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masBerengena"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosBrocoli"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosBrocoli"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanBrocoli"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasBrocoli"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masBrocoli"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/espinaca"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/guatila"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvEspinaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_esp"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorEspinaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvGuatila"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                     GUATILA= $ " />
+                    <TextView
+                        android:id="@+id/valorGuatila"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosEspinaca"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosEspinaca"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanEspinaca"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasEspinaca"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masEspinaca"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosGuatila"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosGuatila"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanGuatila"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasGuatila"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masGuatila"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pimenton"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tomate"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPimenton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_pime"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorPimenton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvTomate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/text_tom"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/valorTomate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPimenton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPimenton"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPimenton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPimenton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPimenton"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosTomate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosTomate"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanTomate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasTomate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masTomate"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="envioCarrito"
+                android:text="@string/text_cargar"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
