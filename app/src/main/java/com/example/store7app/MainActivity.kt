@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-   /* fun registro(view: android.view.View) {
+  /* fun registro(view: android.view.View) {
 
         Toast.makeText(getApplicationContext(),"hola ",Toast.LENGTH_LONG).show()
         val registro = Intent(this, FormActivity::class.java)

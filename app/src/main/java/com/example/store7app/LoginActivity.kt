@@ -60,6 +60,16 @@ class LoginActivity : AppCompatActivity() {
 
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+        var textView: TextView = findViewById(R.id.forgotpass)
+        textView.setOnClickListener { view ->
+
+
+            val loginActivity = Intent(this, resetpassword::class.java)
+            startActivity(loginActivity)
+
+        }
+
+
 
         // Register the onClick listener with the implementation above
         button.setOnClickListener { view ->

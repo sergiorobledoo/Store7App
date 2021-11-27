@@ -84,6 +84,13 @@
             android:textColor="@color/white"
             android:layout_margin="5dp"/>
 
+        <TextView
+            android:id="@+id/forgotpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textColor="@color/com_facebook_blue"
+            android:text="  ¿olvidaste tu contraseña?" />
         <Button
             android:id="@+id/ingreso"
             android:layout_width="match_parent"
